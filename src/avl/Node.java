@@ -71,15 +71,15 @@ public class Node {
         front.offer(null);
 
         while (!front.isEmpty()) {
-            pomNode = front.poll();
-            if (pomNode == null) {
+            pomNode = front.poll();  //vrchol z fronty sa ulozi do premennej
+            if (pomNode == null) {   
                 vyska++;
                 if (front.isEmpty()) {
                     break;
                 }
-                front.offer(null);
+                front.offer(null);      //ak front nieje prazdny preida sa null (odelenie urovni)
 
-            } else {
+            } else {                    
                 if (pomNode.getLeft() != null) {
                     front.offer(pomNode.getLeft());
                 }
@@ -94,7 +94,7 @@ public class Node {
         return vyska;
     }
 
-    public int resetBalanFakt() {
+    public int vypocBalanFakt() {
         //vrchol ma oboch potomkov
         if (this.getLeft() != null && this.getRight() != null) {
             //this.BalanFakt=((-this.getLeft().vyskaVrch())+ (this.getRight().vyskaVrch()));

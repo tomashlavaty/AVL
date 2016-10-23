@@ -22,21 +22,30 @@ public class Main {
         AVL strom =new AVL();
         
         String[] knihy= new String[]{"e","b","a","c","d","g","f","h","x"};
-       // int[] test= new int[]{81,25,1,59,56,98,97,123};
+       //int[] test= new int[]{81,25,1,59,56,98,97,123};
         Random rd=new Random();
         
-         int[] test= new int[]{80,13,54,61,73,65,48,56,72,91,89,55,14};
-         //int[] test= new int[]{8,9,20,11,10};
+        // int[] test= new int[]{80,13,53,61,73,65,48,56,72,91,89,55,14,81,54};
+        // int[] test= new int[]{16,4,85,3,30,86,96,71,79,90};//10,9,12,14,13
+         int[] test= new int[]{65,33,71};
        /* for (int i = 0; i < test.length; i++) {
             strom.add(new Node(new Auto(test[i])));
        
         }*/
-        for (int i = 0; i < 10000; i++) {
-            strom.add(new Node(new Auto(rd.nextInt(100000))));
+        for (int i = 0; i < test.length; i++) {
+            strom.add(new Node(new Auto(test[i])));
         //strom.search(8).s}
         }
        
         System.out.println(strom.preOrderNodePrint());
+         strom.delete(33);
+         //strom.delete(72);
+         
+       
+        //System.out.println(strom.search(48).resetBalanFakt());
+        System.out.println(strom.preOrderNodePrint());
+        System.out.println(strom.levelOrder());
+//        System.out.println(strom.search(48).resetBalanFakt());
         //  System.out.println(strom.search(9).getLeft());
        
        
